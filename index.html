@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryColor: "#0B457F",
+              primaryHoverColor: "#006CD8",
+            },
+            screens: {
+              xs: "600px",
+              mdx: "900px",
+              xl: "1200px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Changan Auto</title>
+  </head>
+  <body class="">
+    <header class="text-[#666666] text-xs shadow-md">
+      <div
+        class="flex items-center max-xs:justify-between gap-8 xl:gap-14 py-3 max-w-[1472px] w-full mx-auto px-5 xs:px-11 xl:px-[86px]"
+      >
+        <span class="flex-shrink-0"
+          ><img src="./assets/images/Logo.svg" alt="Logo" class="object-center"
+        /></span>
+        <nav class="max-w-[590px] w-full ml-auto max-xl:hidden">
+          <ul class="w-full flex items-center justify-between">
+            <li>
+              <a
+                target="_blank"
+                class="cursor-pointer underline-offset-4 hover:underline"
+                >Автомобили в наличии</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="cursor-pointer underline-offset-4 hover:underline"
+                >Спецпредложения</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="cursor-pointer underline-offset-4 hover:underline"
+                >Продать авто</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="cursor-pointer underline-offset-4 hover:underline"
+                >Сервис</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                class="cursor-pointer underline-offset-4 hover:underline"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          class="max-xs:hidden ml-auto max-w-[204px] w-full h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-sm font-medium text-white bg-primaryColor duration-200 hover:bg-primaryHoverColor"
+        >
+          Заказать звонок
+        </button>
+        <span
+          id="menuBtn"
+          class="grid place-content-center pr-2 xl:hidden cursor-pointer duration-200 hover:scale-125"
+          ><svg
+            width="27"
+            height="18"
+            viewBox="0 0 27 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.375 16.2917C0.375 17.0971 1.02792 17.75 1.83333 17.75H25.1667C25.9721 17.75 26.625 17.0971 26.625 16.2917C26.625 15.4863 25.9721 14.8333 25.1667 14.8333H1.83333C1.02792 14.8333 0.375 15.4863 0.375 16.2917ZM0.375 9C0.375 9.80542 1.02792 10.4583 1.83333 10.4583H25.1667C25.9721 10.4583 26.625 9.80542 26.625 9C26.625 8.19459 25.9721 7.54167 25.1667 7.54167H1.83333C1.02792 7.54167 0.375 8.19459 0.375 9ZM1.83333 0.25C1.02792 0.25 0.375 0.902918 0.375 1.70833C0.375 2.51375 1.02792 3.16667 1.83333 3.16667H25.1667C25.9721 3.16667 26.625 2.51375 26.625 1.70833C26.625 0.902918 25.9721 0.25 25.1667 0.25H1.83333Z"
+              fill="#0B457F"
+            />
+          </svg>
+        </span>
+      </div>
+      <hr class="w-full bg-[#cecece]" />
+      <div
+        class="max-w-[1472px] w-full mx-auto px-5 xs:px-11 xl:px-[86px] py-3 max-mdx:hidden"
+      >
+        <ul class="w-full flex items-center gap-8">
+          <li>
+            <a
+              target="_blank"
+              class="underline-offset-4 hover:underline flex items-center gap-2"
+            >
+              <span class="grid place-content-center"
+                ><svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 7.13636C14 11.9091 8 16 8 16C8 16 2 11.9091 2 7.13636C2 5.5089 2.63214 3.94809 3.75736 2.7973C4.88258 1.64651 6.4087 1 8 1C9.5913 1 11.1174 1.64651 12.2426 2.7973C13.3679 3.94809 14 5.5089 14 7.13636Z"
+                    stroke="#666666"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z"
+                    stroke="#666666"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>Олимпийский просп., 5, стр. 1, Москва</p>
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="underline-offset-4 hover:underline flex items-center gap-2"
+            >
+              <span class="grid place-content-center"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1L8 10"
+                    stroke="#666666"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17 1L11.4 17L8.2 9.8L1 6.6L17 1Z"
+                    stroke="#666666"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>Проложить маршрут</p>
+            </a>
+          </li>
+          <li class="flex items-center gap-2 ml-auto">
+            <span class="grid place-content-center"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                  stroke="#666666"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9 4V8.5L12 10"
+                  stroke="#666666"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p>9:00 - 21:00 (ежедневно)</p>
+          </li>
+        </ul>
+      </div>
+      <div
+        id="mobileMenu"
+        class="fixed top-0 right-0 z-10 w-full xs:max-w-[320px] flex justify-between p-4 bg-white h-full shadow-2xl hidden"
+      >
+        <span
+          class="grid place-content-center h-fit cursor-pointer duration-200 hover:scale-125"
+          ><svg
+            width="19"
+            height="19"
+            viewBox="0 0 19 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.542 2.27993L16.7208 0.458679L9.50035 7.6791L2.27993 0.458679L0.458679 2.27993L7.6791 9.50035L0.458679 16.7208L2.27993 18.542L9.50035 11.3216L16.7208 18.542L18.542 16.7208L11.3216 9.50035L18.542 2.27993Z"
+              fill="#0B457F"
+            />
+          </svg>
+        </span>
+        <div class="flex flex-col gap-4">
+          <button
+            type="button"
+            class="max-w-[204px] w-full h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-sm font-medium text-white bg-primaryColor duration-200 hover:bg-primaryHoverColor"
+          >
+            Заказать звонок
+          </button>
+          <nav class="max-w-[590px] w-full ml-auto">
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  target="_blank"
+                  class="cursor-pointer underline-offset-4 hover:underline"
+                  >Автомобили в наличии</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="cursor-pointer underline-offset-4 hover:underline"
+                  >Спецпредложения</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="cursor-pointer underline-offset-4 hover:underline"
+                  >Продать авто</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="cursor-pointer underline-offset-4 hover:underline"
+                  >Контакты</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="cursor-pointer underline-offset-4 hover:underline"
+                  >Сервис</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="max-w-[1472px] w-full mx-auto px-5 xs:px-11 xl:px-[86px]">
+        <section class="py-9 xs:py-14">
+          <h1 class="font-medium text-2xl text-[#3e3e3e] mb-6 xs:mb-8">
+            Теперь услуги дилерского центра Вы можете можете получить онлайн!
+          </h1>
+          <div
+            class="grid mdx:grid-cols-2 xl:grid-cols-3 xl:grid-rows-[repeat(2,250px)] gap-3 text-white"
+          >
+            <div
+              class="p-4 xs:p-8 rounded-xl bg-[url('./assets/images/cardBg.png')] bg-no-repeat bg-cover bg-left relative after:absolute after:w-1/2 after:h-full after:bg-[url('./assets/images/cardImg1.png')] after:bg-no-repeat after:bg-contain after:bg-center after:right-3 after:-bottom-16 after:xl:w-[calc(100%_-_24px)] after:xl:-bottom-40 xl:row-span-2 overflow-hidden"
+            >
+              <div class="max-w-[295px] w-full">
+                <h2 class="font-medium text-[18px]">
+                  Диагностика автомобиля перед покупкой
+                </h2>
+                <p class="text-sm mt-3 mb-8">
+                  Расскажем обо всех скрытых дефектах автомобиля с пробегом
+                </p>
+                <button
+                  type="button"
+                  class="h-10 xs:h-11 w-[148px] flex items-center justify-center font-semibold text-sm border border-white rounded-lg duration-200 hover:bg-white/15"
+                >
+                  Записаться
+                </button>
+              </div>
+            </div>
+            <div
+              class="p-4 xs:p-8 rounded-xl bg-[url('./assets/images/cardBg.png')] bg-no-repeat bg-cover bg-left relative after:absolute after:w-[40%] xs:after:w-1/2 after:max-w-[280px] after:h-full after:bg-[url('./assets/images/cardImg2.png')] after:bg-no-repeat after:bg-contain after:bg-center after:right-[1%] after:xl:-right-10 after:-bottom-14 xs:after:-bottom-[20%] after:mdx:-bottom-[30%] xl:row-start-1 xl:col-start-2 overflow-hidden"
+            >
+              <div class="max-w-[295px] w-full">
+                <h2 class="font-medium text-[18px]">
+                  Онлайн показ автомобиля по видеосвязи
+                </h2>
+                <p class="text-sm mt-3 mb-8">
+                  Проведем онлайн-показ интересующего автомобиля в удобное для
+                  Вас время
+                </p>
+                <button
+                  type="button"
+                  class="h-10 xs:h-11 w-[148px] flex items-center justify-center font-semibold text-sm border border-white rounded-lg duration-200 hover:bg-white/15"
+                >
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
+            <div
+              class="p-4 xs:p-8 rounded-xl bg-[url('./assets/images/cardBg.png')] bg-no-repeat bg-cover bg-left relative overflow-hidden after:absolute after:w-1/2 after:h-full after:bg-[url('./assets/images/cardImg3.png')] after:bg-no-repeat after:bg-contain after:bg-center after:-right-[10%] after:top-[45%] xl:row-start-2 xl:col-start-2"
+            >
+              <div class="max-w-[295px] w-full">
+                <h2 class="font-medium text-[18px]">Онлайн бронирование</h2>
+                <p class="text-sm mt-3 mb-8">
+                  Забронируйте понравившийся автомобиль без визита в дилерский
+                  центр
+                </p>
+                <button
+                  type="button"
+                  class="h-10 xs:h-11 w-[148px] flex items-center justify-center font-semibold text-sm border border-white rounded-lg duration-200 hover:bg-white/15"
+                >
+                  Забронировать
+                </button>
+              </div>
+            </div>
+            <div
+              class="p-4 xs:p-8 rounded-xl bg-[url('./assets/images/cardBg.png')] bg-no-repeat bg-cover bg-left relative after:absolute after:w-1/2 after:xl:w-[90%] after:h-full after:bg-[url('./assets/images/cardImg4.png')] after:bg-no-repeat after:bg-contain after:bg-center after:right-2 after:-bottom-[26%] after:xs:-bottom-[20%] after:mdx:-bottom-[25%] after:xl:-bottom-[30%] xl:row-span-2 overflow-hidden"
+            >
+              <div class="max-w-[295px] w-full">
+                <h2 class="font-medium text-[18px]">
+                  Онлайн оценка автомобиля с пробегом
+                </h2>
+                <p class="text-sm mt-3 mb-8">
+                  Узнайте предварительную стоимость автомобиля за 1 мин, указав
+                  его параметры
+                </p>
+                <button
+                  type="button"
+                  class="h-10 xs:h-11 w-[148px] flex items-center justify-center font-semibold text-sm border border-white rounded-lg duration-200 hover:bg-white/15"
+                >
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div
+      id="modal"
+      class="fixed top-0 left-0 z-20 w-full h-full bg-black/70 grid place-content-center hidden"
+    >
+      <div
+        id="modalInner"
+        class="relative max-w-[500px] p-12 flex flex-col items-center justify-center bg-white rounded-3xl"
+      >
+        <h2 class="text-center font-medium text-2xl text-[#3e3e3e] mb-3">
+          Обратная связь
+        </h2>
+        <form action="#" class="w-full flex flex-col items-center gap-2">
+          <input
+            type="text"
+            name="name"
+            placeholder="Имя"
+            required
+            class="w-full px-6 py-2 rounded-3xl border border-[#666666]"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Электронная почта"
+            required
+            class="w-full px-6 py-2 rounded-3xl border border-[#666666]"
+          />
+          <input
+            type="tel"
+            name="tel"
+            placeholder="Телефон"
+            class="w-full px-6 py-2 rounded-3xl border border-[#666666]"
+          /><button
+            type="submit"
+            class="mt-2 max-w-[120px] w-full h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-sm font-medium text-white bg-primaryColor duration-200 hover:bg-primaryHoverColor"
+          >
+            Отправить
+          </button>
+        </form>
+        <span
+          id="closeModalBtn"
+          class="absolute top-4 right-4 grid place-content-center rounded-full w-fit h-fit cursor-pointer duration-200 hover:scale-105"
+          ><svg
+            id="closeModalBtn"
+            width="19"
+            height="19"
+            viewBox="0 0 19 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.542 2.27993L16.7208 0.458679L9.50035 7.6791L2.27993 0.458679L0.458679 2.27993L7.6791 9.50035L0.458679 16.7208L2.27993 18.542L9.50035 11.3216L16.7208 18.542L18.542 16.7208L11.3216 9.50035L18.542 2.27993Z"
+              fill="#0B457F"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+</html>
