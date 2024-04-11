@@ -1,4 +1,4 @@
-# ChaanganAuto main page landing
+# ChanganAuto main page landing
 
 ---
 
